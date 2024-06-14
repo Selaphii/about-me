@@ -1,0 +1,161 @@
+.neonText {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff,
+      0 0 42px #0fa,
+      0 0 82px #0fa,
+      0 0 92px #0fa,
+      0 0 102px #0fa,
+      0 0 151px #0fa;
+  }
+
+  
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");  
+  background-size: contain;
+  
+  font-size: 18px;
+  font-family: "Helvetica Neue", sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+
+}
+  
+h1 {
+    font-size: 4.2rem;
+}
+
+.pulsate {
+    
+     animation: pulsate 1.5s infinite alternate;     
+}
+  
+h2 {
+    font-size: 1.8rem;
+}
+
+.container {
+  margin-top: 20vh;
+}
+
+@keyframes pulsate {
+    
+  100% {
+
+      text-shadow:
+      0 0 4px #fff,
+      0 0 11px #fff,
+      0 0 19px #fff,
+      0 0 40px #0fa,
+      0 0 80px #0fa,
+      0 0 90px #0fa,
+      0 0 100px #0fa,
+      0 0 150px #0fa;
+  
+  }
+  
+  0% {
+
+    text-shadow:
+    0 0 2px #fff,
+    0 0 4px #fff,
+    0 0 6px #fff,
+    0 0 10px #0fa,
+    0 0 45px #0fa,
+    0 0 55px #0fa,
+    0 0 70px #0fa,
+    0 0 80px #0fa;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.loopSlide {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  overflow: hidden;
+
+  ul {
+      padding: 0;
+      display: flex;
+      flex-shrink: 0;
+
+      &:first-child {
+          animation: slide1 60s -30s linear infinite;
+      }
+      &:last-child {
+          animation: slide2 60s linear infinite;
+      }
+
+      li {
+          display: inline-block;
+          width: 100%;
+          min-width: 500px;
+          margin-right: 20px;
+          list-style: none;
+          text-align: center;
+          
+          img {
+              display: block;
+              width: 600px;
+              height: 400px;
+              object-fit: cover;
+              border: 1px solid #ddd;
+          }
+      }
+  }
+  
+ /*&:hover {
+      ul {
+          animation-play-state: paused;
+      }
+  }*/
+}
+
+@keyframes slide1 {
+  0% {
+      transform: translateX(100%);
+  }
+
+  to {
+      transform: translateX(-100%);
+  }
+}
+
+@keyframes slide2 {
+  0% {
+      transform: translateX(0);
+  }
+
+  to {
+      transform: translateX(-200%);
+  }
+}
+@media screen and (max-width: 768px) {
+  body {
+      font-size: 16px;
+  }
+  
+  h1 {
+      font-size: 3.2rem;
+  }
+  
+  h2 {
+      font-size: 1.4rem;
+  }
+  
+  .container {
+      margin-top: 10vh;
+  }
+}
