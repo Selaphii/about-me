@@ -1,3 +1,47 @@
+body {
+    padding-top: 60px; 
+}
+
+header {
+    position: fixed; 
+    width: 100%; 
+    height: 60px; 
+    padding: 20px 60px; 
+    box-sizing: border-box;
+    top: 0; 
+    left: 0; 
+    display: flex; 
+    align-items: center; 
+    text-transform: uppercase;
+    display: flex; 
+    justify-content:space-between;
+}
+
+header .nav .menu {
+    display: flex; 
+}
+
+header .nav .menu li {
+    list-style: none; 
+    margin-left: 40px;
+}
+
+header .nav .menu li a{
+   color: #0fa;
+   font-weight:bold;
+   text-decoration: none;
+}
+
+main {
+    text-align:center;
+}
+
+h2 {
+   color: #0fa;
+   text-decoration: none;
+   padding-top: 100px;
+}
+
 .neonText {
     color: #fff;
     text-shadow:
@@ -9,37 +53,130 @@
       0 0 92px #0fa,
       0 0 102px #0fa,
       0 0 151px #0fa;
-  }
+  }    
+.home:hover{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.home:nth-child(1){
+    filter: hue-rotate(270deg);
+}
 
+.home span{
+    position: absolute;
+    display: block;
+}
+.home span:nth-child(1){
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+    0%{
+        left: -100%;
+    }
+    50%,100%{
+        left: 100%;
+    }
+}
+.home span:nth-child(2){
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2{
+    0%{
+        top: -100%;
+    }
+    50%,100%{
+        top: 100%;
+    }
+}
+.home span:nth-child(3){
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.50s;
+}
+@keyframes animate3{
+    0%{
+        right: -100%;
+    }
+    50%,100%{
+        right: 100%;
+    }
+}
+
+
+.home span:nth-child(4){
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4{
+    0%{
+        bottom: -100%;
+    }
+    50%,100%{
+        bottom: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    
+    h2 {
+        font-size: 3.2rem;
+    }
+    
+    h3 {
+        font-size: 1.4rem;
+    }
+    
+    .container {
+        margin-top: 10vh;
+    }
+}
+html{
+    scroll-behavior: smooth;
+}
   
 body {
   background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");  
-  background-size: contain;
-  
+  background-size: cover;
   font-size: 18px;
   font-family: "Helvetica Neue", sans-serif;
+  a{
+    background-blend-mode: hard-light;
+  }
 }
 
-h1, h2 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 400;
-  letter-spacing: 0.3em;
-
-}
-  
-h1 {
-    font-size: 4.2rem;
-}
 
 .pulsate {
     
      animation: pulsate 1.5s infinite alternate;     
 }
   
-h2 {
-    font-size: 1.8rem;
-}
 
 .container {
   margin-top: 20vh;
@@ -110,7 +247,7 @@ h2 {
               display: block;
               width: 600px;
               height: 400px;
-              object-fit: cover;
+              object-fit: fill;
               border: 1px solid #ddd;
           }
       }
@@ -158,4 +295,7 @@ h2 {
   .container {
       margin-top: 10vh;
   }
+}
+body{
+background-blend-mode: overlay;  
 }
