@@ -6,6 +6,37 @@
     box-sizing: border-box;
 }
 
+header {
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.8); /* Optional background for better visibility */
+    z-index: 1000; /* Ensure header is above all other elements */
+}
+
+header .nav .menu {
+    display: flex;
+}
+
+header .nav .menu li {
+    list-style: none;
+    margin-left: 40px;
+}
+
+header .nav .menu li a {
+    color: #0fa;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 body {
     background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");
     background-color: black;
@@ -15,14 +46,17 @@ body {
     align-items: center;
     height: 100vh;
     font-family: "Helvetica Neue", sans-serif;
+    margin-top: 80px; /* To avoid content hidden under the fixed header */
 }
 
 .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
     text-align: center;
+   /* background-color: rgba(0, 0, 0, 0.7); /* Optional background for better visibility */
+    border-radius: 10px; /* Optional for smoother look */
 }
 
 h1 {
@@ -30,6 +64,7 @@ h1 {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0.3em;
+    color: #fff; /* Ensure header text color is white */
 }
 
 label {
@@ -120,87 +155,6 @@ a {
     margin-right: 50px;
 }
 
-a:hover {
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
-    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
-}
-
-a span {
-    position: absolute;
-    display: block;
-}
-
-a span:nth-child(1) {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #03e9f4);
-    animation: animate1 1s linear infinite;
-}
-
-@keyframes animate1 {
-    0% {
-        left: -100%;
-    }
-    50%, 100% {
-        left: 100%;
-    }
-}
-
-a span:nth-child(2) {
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg, transparent, #03e9f4);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-
-@keyframes animate2 {
-    0% {
-        top: -100%;
-    }
-    50%, 100% {
-        top: 100%;
-    }
-}
-
-a span:nth-child(3) {
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, transparent, #03e9f4);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
-}
-
-@keyframes animate3 {
-    0% {
-        right: -100%;
-    }
-    50%, 100% {
-        right: 100%;
-    }
-}
-
-a span:nth-child(4) {
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg, transparent, #03e9f4);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-}
-
 @keyframes animate4 {
     0% {
         bottom: -100%;
@@ -232,6 +186,14 @@ a span:nth-child(4) {
     input[type="submit"] {
         padding: 8px;
     }
+
+    header {
+        padding: 20px 30px; /* Adjust padding for smaller screens */
+    }
+
+    header .nav .menu li {
+        margin-left: 20px; /* Adjust margin between menu items */
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -253,5 +215,22 @@ a span:nth-child(4) {
 
     .container {
         padding: 10px;
+    }
+
+    header {
+        padding: 20px 15px; /* Further adjust padding for very small screens */
+    }
+
+    header .nav .menu li {
+        margin-left: 10px; /* Further adjust margin between menu items */
+    }
+
+    .nav .menu {
+        flex-direction: column; /* Stack menu items vertically */
+    }
+
+    .nav .menu li {
+        margin-left: 0; /* Remove left margin */
+        margin-bottom: 10px; /* Add bottom margin for spacing */
     }
 }
