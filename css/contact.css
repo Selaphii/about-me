@@ -24,11 +24,12 @@ header {
 
 header .nav .menu {
     display: flex;
+    text-align: center;
 }
 
 header .nav .menu li {
     list-style: none;
-    margin-left: 40px;
+    margin-left: 20px;
 }
 
 header .nav .menu li a {
