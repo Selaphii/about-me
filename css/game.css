@@ -1,45 +1,98 @@
 body {
     padding-top: 60px; 
+text-decoration:none;
 }
-
+a{
+    text-decoration:none;
+    color: #0fa;
+}
+/* header設定 */
 header {
-    position: fixed; 
-    width: 100%; 
-    height: 60px; 
-    padding: 20px 60px; 
+    position: fixed;
+    width: 100%;
+    height: 60px;
+    padding: 20px 60px;
     box-sizing: border-box;
-    top: 0; 
-    left: 0; 
-    display: flex; 
-    align-items: center; 
+    background: #333;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     text-transform: uppercase;
-    display: flex; 
-    justify-content:space-between;
+    z-index: 1000;
 }
 
+/* メニューの設定 */
 header .nav .menu {
-    display: flex; 
+    display: flex;
 }
 
 header .nav .menu li {
-    list-style: none; 
+    list-style: none;
     margin-left: 40px;
 }
 
-header .nav .menu li a{
-   color: #0fa;
-   font-weight:bold;
-   text-decoration: none;
+header .nav .menu li a {
+    color: #0fa;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 main {
     text-align:center;
 }
 
+
 h2 {
    color: #0fa;
    text-decoration: none;
    padding-top: 100px;
+}
+/* gameの設定 */
+.game {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.game ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    justify-content: center; /* ここでセンタリングを追加 */
+}
+
+.game ul li {
+    margin: 20px;
+}
+
+.game ul li img {
+    border-radius: 5px;
+    object-fit: contain;
+}
+
+/* gameの画像設定 */
+.game ul li img {
+    width: 800px;
+    height: 700px;
+}
+
+/* footerの設定 */
+footer {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+}
+
+.btn-backtotop a {
+    color: #0fa;
+    text-decoration: none;
+    font-size: 1.2rem;
 }
 
 .neonText {
