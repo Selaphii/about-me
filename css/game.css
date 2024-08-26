@@ -1,12 +1,22 @@
+/* Bodyと基本設定 */
 body {
     padding-top: 60px; 
-text-decoration:none;
+    text-decoration: none;
+    text-align: center;
+    background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");  
+    background-size: cover;
+    background-blend-mode: overlay;
+    font-size: 18px;
+    font-family: "Helvetica Neue", sans-serif;
+    scroll-behavior: smooth;
 }
-a{
-    text-decoration:none;
+
+a {
+    text-decoration: none;
     color: #0fa;
 }
-/* header設定 */
+
+/* Header設定 */
 header {
     position: fixed;
     width: 100%;
@@ -23,7 +33,7 @@ header {
     z-index: 1000;
 }
 
-/* メニューの設定 */
+/* メニュー設定 */
 header .nav .menu {
     display: flex;
 }
@@ -36,52 +46,62 @@ header .nav .menu li {
 header .nav .menu li a {
     color: #0fa;
     font-weight: bold;
-    text-decoration: none;
 }
 
+/* Mainコンテンツ設定 */
 main {
-    text-align:center;
+    text-align: center;
 }
-
 
 h2 {
-   color: #0fa;
-   text-decoration: none;
-   padding-top: 100px;
-}
-/* gameの設定 */
-.game {
-    text-decoration: none;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    color: #0fa;
+    padding-top: 100px;
 }
 
-.game ul{
+/* Gameリスト設定 */
+/* Gameリスト設定 */
+.game-list {
     display: flex;
     flex-wrap: wrap;
-    list-style: none;
-    padding: 0;
-    justify-content: center; /* ここでセンタリングを追加 */
+    justify-content: center;
+    gap: 20px;
 }
 
-.game ul li {
-    margin: 20px;
+.game-item {
+    text-align: center;
+    max-width: 200px; /* 画像の幅を200pxに設定 */
 }
 
-.game ul li img {
-    border-radius: 5px;
-    object-fit: contain;
+.game-item img {
+    width: 200px; /* 幅を200pxに設定 */
+    height: 150px; /* 高さを150pxに設定 */
+    object-fit: fill; /* 画像を枠内に収める */
+    display: block;
+    margin: 0 auto;
+    filter: brightness(0.7);
+    transition: filter 0.3s;
 }
 
-/* gameの画像設定 */
-.game ul li img {
-    width: 800px;
-    height: 700px;
+.game-item img:hover {
+    filter: brightness(1);
 }
 
-/* footerの設定 */
+.game-item p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: white;
+    text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
+}
+
+/* Footer設定 */
 footer {
     margin-top: 20px;
     padding: 20px;
@@ -89,266 +109,99 @@ footer {
     color: #fff;
 }
 
+/* Back to Topボタン */
 .btn-backtotop a {
     color: #0fa;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
+/* Neon Text設定 */
 .neonText {
     color: #fff;
-    text-shadow:
-      0 0 7px #fff,
-      0 0 10px #fff,
-      0 0 21px #fff,
-      0 0 42px #0fa,
-      0 0 82px #0fa,
-      0 0 92px #0fa,
-      0 0 102px #0fa,
-      0 0 151px #0fa;
-  }    
-.home:hover{
-    background: #03e9f4;
-    color: #050801;
-    box-shadow: 0 0 5px #03e9f4,
-                0 0 25px #03e9f4,
-                0 0 50px #03e9f4,
-                0 0 200px #03e9f4;
-     -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
-}
-.home:nth-child(1){
-    filter: hue-rotate(270deg);
+    text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px #0fa,
+        0 0 82px #0fa,
+        0 0 92px #0fa,
+        0 0 102px #0fa,
+        0 0 151px #0fa;
 }
 
-.home span{
-    position: absolute;
+/* Loop Slide設定 */
+.loopSlide {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.loopSlide ul {
+    padding: 0;
+    display: flex;
+    flex-shrink: 0;
+}
+
+.loopSlide ul:first-child {
+    animation: slide1 60s -30s linear infinite;
+}
+
+.loopSlide ul:last-child {
+    animation: slide2 60s linear infinite;
+}
+
+.loopSlide ul li {
+    display: inline-block;
+    width: 100%;
+    min-width: 500px;
+    margin-right: 20px;
+    list-style: none;
+    text-align: center;
+}
+
+.loopSlide ul li img {
     display: block;
+    width: 600px;
+    height: 400px;
+    object-fit: fill;
+    border: 1px solid #ddd;
 }
-.home span:nth-child(1){
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(90deg,transparent,#03e9f4);
-    animation: animate1 1s linear infinite;
-}
-@keyframes animate1{
-    0%{
-        left: -100%;
+
+@keyframes slide1 {
+    0% {
+        transform: translateX(100%);
     }
-    50%,100%{
-        left: 100%;
-    }
-}
-.home span:nth-child(2){
-    top: -100%;
-    right: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(180deg,transparent,#03e9f4);
-    animation: animate2 1s linear infinite;
-    animation-delay: 0.25s;
-}
-@keyframes animate2{
-    0%{
-        top: -100%;
-    }
-    50%,100%{
-        top: 100%;
-    }
-}
-.home span:nth-child(3){
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg,transparent,#03e9f4);
-    animation: animate3 1s linear infinite;
-    animation-delay: 0.50s;
-}
-@keyframes animate3{
-    0%{
-        right: -100%;
-    }
-    50%,100%{
-        right: 100%;
+    to {
+        transform: translateX(-100%);
     }
 }
 
+@keyframes slide2 {
+    0% {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-200%);
+    }
+}
 
-.home span:nth-child(4){
-    bottom: -100%;
-    left: 0;
-    width: 2px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent,#03e9f4);
-    animation: animate4 1s linear infinite;
-    animation-delay: 0.75s;
-}
-@keyframes animate4{
-    0%{
-        bottom: -100%;
-    }
-    50%,100%{
-        bottom: 100%;
-    }
-}
+/* Media Queries */
 @media screen and (max-width: 768px) {
     body {
         font-size: 16px;
     }
     
-    h2 {
+    h1 {
         font-size: 3.2rem;
     }
     
-    h3 {
+    h2 {
         font-size: 1.4rem;
     }
     
     .container {
         margin-top: 10vh;
     }
-}
-html{
-    scroll-behavior: smooth;
-}
-  
-body {
-  background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");  
-  background-size: cover;
-  font-size: 18px;
-  font-family: "Helvetica Neue", sans-serif;
-  a{
-    background-blend-mode: hard-light;
-  }
-}
-
-
-.pulsate {
-    
-     animation: pulsate 1.5s infinite alternate;     
-}
-  
-
-.container {
-  margin-top: 20vh;
-}
-
-@keyframes pulsate {
-    
-  100% {
-
-      text-shadow:
-      0 0 4px #fff,
-      0 0 11px #fff,
-      0 0 19px #fff,
-      0 0 40px #0fa,
-      0 0 80px #0fa,
-      0 0 90px #0fa,
-      0 0 100px #0fa,
-      0 0 150px #0fa;
-  
-  }
-  
-  0% {
-
-    text-shadow:
-    0 0 2px #fff,
-    0 0 4px #fff,
-    0 0 6px #fff,
-    0 0 10px #0fa,
-    0 0 45px #0fa,
-    0 0 55px #0fa,
-    0 0 70px #0fa,
-    0 0 80px #0fa;
-  }
-}
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-.loopSlide {
-  position: relative;
-  display: flex;
-  width: 100vw;
-  overflow: hidden;
-
-  ul {
-      padding: 0;
-      display: flex;
-      flex-shrink: 0;
-
-      &:first-child {
-          animation: slide1 60s -30s linear infinite;
-      }
-      &:last-child {
-          animation: slide2 60s linear infinite;
-      }
-
-      li {
-          display: inline-block;
-          width: 100%;
-          min-width: 500px;
-          margin-right: 20px;
-          list-style: none;
-          text-align: center;
-          
-          img {
-              display: block;
-              width: 600px;
-              height: 400px;
-              object-fit: fill;
-              border: 1px solid #ddd;
-          }
-      }
-  }
-  
- /*&:hover {
-      ul {
-          animation-play-state: paused;
-      }
-  }*/
-}
-
-@keyframes slide1 {
-  0% {
-      transform: translateX(100%);
-  }
-
-  to {
-      transform: translateX(-100%);
-  }
-}
-
-@keyframes slide2 {
-  0% {
-      transform: translateX(0);
-  }
-
-  to {
-      transform: translateX(-200%);
-  }
-}
-@media screen and (max-width: 768px) {
-  body {
-      font-size: 16px;
-  }
-  
-  h1 {
-      font-size: 3.2rem;
-  }
-  
-  h2 {
-      font-size: 1.4rem;
-  }
-  
-  .container {
-      margin-top: 10vh;
-  }
-}
-body{
-background-blend-mode: overlay;  
 }
