@@ -11,13 +11,14 @@
 
 <body>
     <header>
-        <h1 class="neonText pulsate">GAME</h1>
+        <h1 class="neonText pulsate">game</h1>
         <nav class="nav">
+            <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button> <!-- Added menu toggle button -->
             <ul class="menu neonText pulsate">
                 <li><a href="index.html">home</a></li>
                 <li><a href="book.html">book</a></li>
                 <li><a href="me.html">me</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html">contact</a></li>
             </ul>
         </nav>
     </header>
@@ -73,4 +74,10 @@
     <footer>
     </footer>
 </body>
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+        document.querySelector('.menu').classList.toggle('open');
+    });
+</script>
+
 </html>
