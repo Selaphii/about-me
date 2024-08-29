@@ -6,20 +6,21 @@
     <title>Contact</title>
     <link rel="stylesheet" media="all" href="css/contact.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-    <script src="JShome.js"></script>
+    <script src="JS/contact.js" defer></script>
 </head>
-<body>
     <header>
-        <nav class="nav">
-            <ul class="menu neonText pulsate">
-                <li><a href="index.html">home</a></li>
-                <li><a href="book.html">book</a></li>
-                <li><a href="me.html">me</a></li>
-                <li><a href="game.html">game</a></li>
-            </ul>
-        </nav>
+                <nav class="nav">
+                    <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button> <!-- Added menu toggle button -->
+                    <ul class="menu neonText pulsate">
+                        <li><a href="index.html">home</a></li>
+                        <li><a href="game.html">game</a></li>
+                        <li><a href="book.html">book</a></li>
+                        <li><a href="me.html">me</a></li>
+                    </ul>
+                </nav>
     </header>
-    <div class="container neonText pulsate">
+<body>
+<div class="container neonText pulsate">
         <h1>Contact</h1>
         <form action="/submit_contact_form" method="post">
             <label for="name">Name</label>

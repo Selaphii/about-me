@@ -235,3 +235,76 @@ a {
         margin-bottom: 10px; /* Add bottom margin for spacing */
     }
 }
+
+    header .nav .menu {
+        position: fixed;
+        right: 0;
+        background-color:rgba(49, 49, 49, 0.8);
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(100%); /* Initially hidden */
+        transition: transform 0.3s ease-in-out;
+    }
+
+
+    header .nav .menu li a {
+        font-size: 1.2rem; /* Optional: Adjust font size if needed */
+        color: #0fa;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 
+            0 0 5px #fff,   /* Reduced neon glow */
+            0 0 8px #0fa;   /* Reduced neon glow */
+    }
+    
+    header .nav .menu.open {
+        transform: translateX(0); /* Show menu when open */
+    }
+    .menu-toggle {
+        position: fixed; /* Fixed positioning */
+        top: 20px; /* Adjust top position */
+        right: 20px; /* Adjust right position */
+        background-color: transparent; /* Transparent background */
+        color: #0fa; /* Neon green color */
+        border: 2px solid #0fa; /* Neon green border */
+        font-size: 2rem; /* Larger font size */
+        padding: 10px; /* Padding around the button */
+        cursor: pointer; /* Pointer cursor */
+        z-index: 1001; /* Ensure button is above the menu */
+        text-shadow: 
+            0 0 7px #fff, 
+            0 0 10px #fff, 
+            0 0 21px #0fa, 
+            0 0 42px #0fa, 
+            0 0 82px #0fa, 
+            0 0 92px #0fa, 
+            0 0 102px #0fa, 
+            0 0 151px #0fa; /* Neon glow effect */
+        transition: all 0.3s ease-in-out; /* Smooth transition */
+    }
+    
+    .menu-toggle:hover {
+        color: #fff; /* White color on hover */
+        border-color: #fff; /* White border on hover */
+        text-shadow: 
+            0 0 10px #fff, 
+            0 0 15px #fff, 
+            0 0 25px #fff, 
+            0 0 35px #0fa, 
+            0 0 45px #0fa, 
+            0 0 55px #0fa, 
+            0 0 70px #0fa; /* Stronger glow on hover */
+    }
+    @media screen and (max-width: 768px) {
+    header .nav .menu li {
+        margin-left: 5px; /* Reduced margin for smaller screens */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header .nav .menu li {
+        margin-left: 0; /* No margin for very small screens */
+        margin-bottom: 10px; /* Spacing between items for better touch targets */
+    }
+}

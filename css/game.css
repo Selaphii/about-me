@@ -105,7 +105,9 @@ h2 {
 footer {
     margin-top: 20px;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");  
+    background-size: cover;
+    background-blend-mode: overlay;
     color: #fff;
 }
 
@@ -208,7 +210,6 @@ footer {
 /* General styles */
 body {
     background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");
-    background-color: black;
     background-size: cover;
     font-family: "Helvetica Neue", sans-serif;
     color: white;
@@ -235,28 +236,12 @@ header {
 /* Menu toggle button for mobile */
 .menu-toggle {
     display: none;
-    font-size: 1.8rem;
+    font-size: 2rem; /* Increased font size */
     color: #0fa;
     background: none;
     border: none;
     cursor: pointer;
     z-index: 1001; /* Higher than the header for visibility */
-}
-
-header .nav .menu {
-    display: flex;
-    flex-direction: row;
-}
-
-header .nav .menu li {
-    list-style: none;
-    margin-left: 40px;
-}
-
-header .nav .menu li a {
-    color: #0fa;
-    font-weight: bold;
-    text-decoration: none;
 }
 
 /* Responsive menu styling */
@@ -269,7 +254,9 @@ header .nav .menu li a {
         position: fixed;
         top: 60px;
         right: 0;
-        background: #333;
+        background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");  
+        background-size: cover;
+        background-blend-mode: overlay;    
         width: 100%;
         max-width: 300px;
         height: 100%;
@@ -278,10 +265,21 @@ header .nav .menu li a {
         justify-content: center;
         transform: translateX(100%); /* Initially hidden */
         transition: transform 0.3s ease-in-out;
+        padding: 20px; /* Added padding for better spacing */
     }
 
     header .nav .menu li {
         margin: 20px 0;
+    }
+
+    header .nav .menu li a {
+        font-size: 1.5rem; /* Increased text size */
+        color: #0fa;
+        font-weight: bold;
+        text-decoration: none;
+        text-shadow: 
+            0 0 5px #fff,   /* Reduced neon glow */
+            0 0 8px #0fa;   /* Reduced neon glow */
     }
 
     header .nav .menu.open {
