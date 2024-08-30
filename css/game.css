@@ -1,4 +1,3 @@
-/* Bodyと基本設定 */
 body {
     padding-top: 60px; 
     text-decoration: none;
@@ -16,7 +15,6 @@ a {
     color: #0fa;
 }
 
-/* Header設定 */
 header {
     position: fixed;
     width: 100%;
@@ -33,7 +31,6 @@ header {
     z-index: 1000;
 }
 
-/* メニュー設定 */
 header .nav .menu {
     display: flex;
 }
@@ -48,7 +45,6 @@ header .nav .menu li a {
     font-weight: bold;
 }
 
-/* Mainコンテンツ設定 */
 main {
     text-align: center;
 }
@@ -58,8 +54,6 @@ h2 {
     padding-top: 100px;
 }
 
-/* Gameリスト設定 */
-/* Gameリスト設定 */
 .game-list {
     display: flex;
     flex-wrap: wrap;
@@ -69,13 +63,13 @@ h2 {
 
 .game-item {
     text-align: center;
-    max-width: 200px; /* 画像の幅を200pxに設定 */
+    max-width: 200px;
 }
 
 .game-item img {
-    width: 200px; /* 幅を200pxに設定 */
-    height: 150px; /* 高さを150pxに設定 */
-    object-fit: fill; /* 画像を枠内に収める */
+    width: 200px; 
+    height: 150px; 
+    object-fit: fill; 
     display: block;
     margin: 0 auto;
     filter: brightness(0.7);
@@ -101,7 +95,6 @@ h2 {
         0 0 151px #0fa;
 }
 
-/* Footer設定 */
 footer {
     margin-top: 20px;
     padding: 20px;
@@ -111,14 +104,12 @@ footer {
     color: #fff;
 }
 
-/* Back to Topボタン */
 .btn-backtotop a {
     color: #0fa;
     text-decoration: none;
     font-size: 1.2rem;
 }
 
-/* Neon Text設定 */
 .neonText {
     color: #fff;
     text-shadow: 
@@ -132,7 +123,6 @@ footer {
         0 0 151px #0fa;
 }
 
-/* Loop Slide設定 */
 .loopSlide {
     position: relative;
     display: flex;
@@ -189,7 +179,6 @@ footer {
     }
 }
 
-/* Media Queries */
 @media screen and (max-width: 768px) {
     body {
         font-size: 16px;
@@ -207,7 +196,6 @@ footer {
         margin-top: 10vh;
     }
 }
-/* General styles */
 body {
     background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");
     background-size: cover;
@@ -233,18 +221,16 @@ header {
     z-index: 1000;
 }
 
-/* Menu toggle button for mobile */
 .menu-toggle {
     display: none;
-    font-size: 2rem; /* Increased font size */
+    font-size: 2rem; 
     color: #0fa;
     background: none;
     border: none;
     cursor: pointer;
-    z-index: 1001; /* Higher than the header for visibility */
+    z-index: 1001;
 }
 
-/* Responsive menu styling */
 @media screen and (max-width: 768px) {
     .menu-toggle {
         display: block;
@@ -263,9 +249,9 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transform: translateX(100%); /* Initially hidden */
+        transform: translateX(100%); 
         transition: transform 0.3s ease-in-out;
-        padding: 20px; /* Added padding for better spacing */
+        padding: 20px; 
     }
 
     header .nav .menu li {
@@ -273,21 +259,20 @@ header {
     }
 
     header .nav .menu li a {
-        font-size: 1.5rem; /* Increased text size */
+        font-size: 1.5rem; 
         color: #0fa;
         font-weight: bold;
         text-decoration: none;
         text-shadow: 
-            0 0 5px #fff,   /* Reduced neon glow */
-            0 0 8px #0fa;   /* Reduced neon glow */
+            0 0 5px #fff,   
+            0 0 8px #0fa;   
     }
 
     header .nav .menu.open {
-        transform: translateX(0); /* Show menu when open */
+        transform: translateX(0); 
     }
 }
 
-/* Responsive header adjustments */
 @media screen and (max-width: 480px) {
     header {
         padding: 20px 15px;
