@@ -18,8 +18,8 @@ header {
     align-items: center;
     text-transform: uppercase;
     justify-content: space-between;
-    background-color: rgba(0, 0, 0, 0.8); /* Optional background for better visibility */
-    z-index: 1000; /* Ensure header is above all other elements */
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 1000; 
 }
 
 header .nav .menu {
@@ -40,24 +40,21 @@ header .nav .menu li a {
 
 body {
     background-image: url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png");
-    background-color: black;
     background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     font-family: "Helvetica Neue", sans-serif;
-    margin-top: 80px; /* To avoid content hidden under the fixed header */
+    margin-top: 80px; 
 }
 
 .container {
     max-width: 600px;
     margin: 50px auto;
     padding: 20px;
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
-    text-align: center;
-   /* background-color: rgba(0, 0, 0, 0.7); /* Optional background for better visibility */
-    border-radius: 10px; /* Optional for smoother look */
+    text-align: center; 
+    border-radius: 10px; 
 }
 
 h1 {
@@ -65,7 +62,7 @@ h1 {
     text-transform: uppercase;
     font-weight: 400;
     letter-spacing: 0.3em;
-    color: #fff; /* Ensure header text color is white */
+    color: #fff; 
 }
 
 label {
@@ -189,11 +186,11 @@ a {
     }
 
     header {
-        padding: 20px 30px; /* Adjust padding for smaller screens */
+        padding: 20px 30px;
     }
 
     header .nav .menu li {
-        margin-left: 20px; /* Adjust margin between menu items */
+        margin-left: 20px; 
     }
 }
 
@@ -219,59 +216,59 @@ a {
     }
 
     header {
-        padding: 20px 15px; /* Further adjust padding for very small screens */
+        padding: 20px 15px; 
     }
 
     header .nav .menu li {
-        margin-left: 10px; /* Further adjust margin between menu items */
+        margin-left: 10px; 
     }
 
     .nav .menu {
-        flex-direction: column; /* Stack menu items vertically */
+        flex-direction: column; 
     }
 
     .nav .menu li {
-        margin-left: 0; /* Remove left margin */
-        margin-bottom: 10px; /* Add bottom margin for spacing */
+        margin-left: 0; 
+        margin-bottom: 10px; 
     }
 }
 
     header .nav .menu {
         position: fixed;
         right: 0;
-        background-color:rgba(49, 49, 49, 0.8);
+        background-color:rgba(40, 38, 38, 0.451);
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        transform: translateX(100%); /* Initially hidden */
+        transform: translateX(100%); 
         transition: transform 0.3s ease-in-out;
     }
 
 
     header .nav .menu li a {
-        font-size: 1.2rem; /* Optional: Adjust font size if needed */
+        font-size: 1.2rem; 
         color: #0fa;
         font-weight: bold;
         text-decoration: none;
         text-shadow: 
-            0 0 5px #fff,   /* Reduced neon glow */
-            0 0 8px #0fa;   /* Reduced neon glow */
+            0 0 5px #fff,  
+            0 0 8px #0fa;  
     }
     
     header .nav .menu.open {
-        transform: translateX(0); /* Show menu when open */
+        transform: translateX(0);
     }
     .menu-toggle {
-        position: fixed; /* Fixed positioning */
-        top: 20px; /* Adjust top position */
-        right: 20px; /* Adjust right position */
-        background-color: transparent; /* Transparent background */
-        color: #0fa; /* Neon green color */
-        border: 2px solid #0fa; /* Neon green border */
-        font-size: 2rem; /* Larger font size */
-        padding: 10px; /* Padding around the button */
-        cursor: pointer; /* Pointer cursor */
-        z-index: 1001; /* Ensure button is above the menu */
+        position: fixed; 
+        top: 20px; 
+        right: 20px; 
+        background-color: transparent; 
+        color: #0fa; 
+        border: 2px solid #0fa;
+        font-size: 2rem;
+        padding: 10px; 
+        cursor: pointer; 
+        z-index: 1001;
         text-shadow: 
             0 0 7px #fff, 
             0 0 10px #fff, 
@@ -280,13 +277,13 @@ a {
             0 0 82px #0fa, 
             0 0 92px #0fa, 
             0 0 102px #0fa, 
-            0 0 151px #0fa; /* Neon glow effect */
-        transition: all 0.3s ease-in-out; /* Smooth transition */
+            0 0 151px #0fa; 
+        transition: all 0.3s ease-in-out;
     }
     
     .menu-toggle:hover {
-        color: #fff; /* White color on hover */
-        border-color: #fff; /* White border on hover */
+        color: #fff; 
+        border-color: #fff; 
         text-shadow: 
             0 0 10px #fff, 
             0 0 15px #fff, 
@@ -294,17 +291,17 @@ a {
             0 0 35px #0fa, 
             0 0 45px #0fa, 
             0 0 55px #0fa, 
-            0 0 70px #0fa; /* Stronger glow on hover */
+            0 0 70px #0fa; 
     }
     @media screen and (max-width: 768px) {
     header .nav .menu li {
-        margin-left: 5px; /* Reduced margin for smaller screens */
+        margin-left: 5px; 
     }
 }
 
 @media screen and (max-width: 480px) {
     header .nav .menu li {
-        margin-left: 0; /* No margin for very small screens */
-        margin-bottom: 10px; /* Spacing between items for better touch targets */
+        margin-left: 0; 
+        margin-bottom: 10px;
     }
 }

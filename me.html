@@ -6,52 +6,89 @@
 <title>me</title>
 <link rel="stylesheet" media="all" href="css/me.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-<script src="JS/me.js"></script>
+<script src="JS/me.js" defer></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1 class="neon-text">Okina Shuji</h1>
-            <p class="tagline neon-text">ホワイトハッカー専攻</p>
+            <nav class="nav">
+                <button class="menu-toggle" aria-label="Toggle Menu">&#9776;</button> 
+                <ul class="menu neonText pulsate">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="game.html">game</a></li>
+                    <li><a href="book.html">book</a></li>
+                    <li><a href="contact.html">contact</a></li>
+                </ul>
+            </nav>
         </header>
+        <h1 class="neon-text">Okina Shuji</h1>
+        <p class="tagline neon-text">ホワイトハッカー専攻</p>
+        <section class="about" id="about">
+            <h1 class="neon-text">自己紹介</h1>
+            <h2 class="neon-text">
+                2006年2月4日生まれ<br>
+                滋賀県出身<br>
 
-        <section class="about">
-            <h2 class="neon-text">自己紹介</h2>
-            <p>
-                ここに自己紹介文を入力します。あなたの経歴や興味、情熱について述べてください。
-            </p>
+            </h2>
         </section>
 
-        <section class="skills">
-            <h2 class="neon-text">スキル</h2>
-            <div class="skills-list">
-                <div class="skill-item">
-                    <h3>HTML</h3>
+        <section class="favorites" id="favorites">
+            <h2 class="neon-text">お気に入り</h2>
+            <div class="favorites-buttons">
+                <button class="neon-button" onclick="location.href='#food'">好きな食べ物</button>
+                <button class="neon-button" onclick="location.href='#games'">好きなゲーム</button>
+                <button class="neon-button" onclick="location.href='#songs'">好きな曲</button>
+            </div>
+        </section>
+
+        <section id="food">
+            <h2 class="neon-text">好きな食べ物</h2>
+            <div class="favorites-list">
+                <div class="favorite-item">
+                    <a href="https://umiza.jp/"><img src="https://tblg.k-img.com/restaurant/images/Rvw/175840/640x640_rect_890235b718f332b4b57ad5af284a5306.jpg" alt="寿司の画像"></a>
+                    <p class="neon-text">寿司</p>
+                    <a href="https://www.rairaitei.co.jp/"><img src="https://rimage.hitosara.com/gg/image/0004028490/0004028490I3_750x500s.jpg" alt="ラーメンの画像"></a>
+                    <p class="neon-text">ラーメン</p>
+                    
                 </div>
-                <div class="skill-item">
-                    <h3>CSS</h3>
-                </div>
-                <div class="skill-item">
-                    <h3>JavaScript</h3>
-                </div>
-                <div class="skill-item">
-                    <h3>Photoshop</h3>
+            </div>
+        </section>
+        
+        <section id="games">
+            <h2 class="neon-text">好きなゲームキャラ</h2>
+            <div class="favorites-list">
+                <div class="favorite-item">
+                    <a href="https://genshin.hoyoverse.com/ja/character/Fontaine?char=10"><img src="https://act-upload.hoyoverse.com/event-ugc-hoyowiki/2024/04/19/94675339/505d703495f94ef9138e025384bbb5d7_3305259194735504598.png?x-oss-process=image%2Fformat%2Cwebp" alt="alrecchinoの画像"></a>
+                    <p class="neon-text">alrecchino</p>
+                    <a href="https://genshin.hoyoverse.com/ja/character/inazuma?char=10"><img src="https://stat.ameba.jp/user_images/20220220/10/yukki-pso29646/87/fc/j/o1920108015077514242.jpg" alt="八重神子"></a>
+                    <p class="neon-text">八重神子</p>
                 </div>
             </div>
         </section>
 
+        <section id="songs">
+            <h2 class="neon-text">好きな曲</h2>
+            <div class="favorites-list">
+                <div class="favorite-item">
+                    <a href="https://www.youtube.com/watch?v=440BP14KqZk"><img src="https://i.ytimg.com/vi/0nnVWl4qbWM/maxresdefault.jpg" alt="泡沫の夜の画像"></a>
+                    <p class="neon-text">泡沫の夜</p>
+                    <a href="https://www.youtube.com/watch?v=0nnVWl4qbWM"><img src="https://i.ytimg.com/vi/440BP14KqZk/maxresdefault.jpg" alt="アスノヨゾラ哨戒班 coverの画像"></a>
+                    <p class="neon-text">アスノヨゾラ哨戒班 cover</p>
+                </div>
+            </div>
+        </section>
 
         <footer>
             <p>&copy; 2024 あなたの名前</p>
             <div class="social-links">
-                <a href="#" class="social-link">Twitter</a>
-                <a href="#" class="social-link">LinkedIn</a>
-                <a href="#" class="social-link">GitHub</a>
+                <div class="btn-backtotop"><a href="#top" data-scroll>トップへ戻る</a></div>
             </div>
+            
         </footer>
     </div>
 
-
     <script src="script.js"></script>
 </body>
+
+
 </html>
